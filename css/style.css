@@ -1,0 +1,213 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('/img/game-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.title {
+  color: rgb(211, 181, 238);
+}
+
+.container {
+  position: relative;
+  padding-top: 40px;
+}
+
+.game-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#cards-number {
+  margin-right: 18px;
+  max-width: 500px;
+}
+
+.btn-secondary {
+  max-height: 50px;
+  font-size: 19px;
+}
+
+.game {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  height: 5em;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-image: url('../img/card-back.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: transparent;
+  font-size: 42px;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.card.open {
+  background-size: contain;
+  background-position: center center;
+  background-color: rgb(196, 207, 207);
+  color: rgb(108, 16, 82);
+  transform: rotateY(0.5turn);
+}
+
+.card.success {
+  background-size: contain;
+  background-color: rgb(191, 246, 135);
+  color: rgb(108, 16, 82);
+  transform: scale(0.9);
+  pointer-events: none;
+  filter: grayscale(0.6);
+}
+
+/* timer */
+.timer-display {
+  position: absolute;
+  top: -146px;
+  right: 63px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  background-image: url('../img/timer.png');
+  background-size: cover;
+  background-position: center center;
+}
+
+.timer-display__current {
+  color: black;
+  font-size: 32px;
+  font-weight: bold;
+  padding-bottom: 27px;
+}
+
+/* messages */
+/* popap */
+.popap-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s all;
+  overflow: auto;
+}
+
+.popap-bg--active {
+  opacity: 1;
+  pointer-events: all;
+  transition: 0.2s all;
+}
+
+.popap {
+  position: absolute;
+  padding: 25px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 5px 20px #00000057;
+  background: #ffffff;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+.popap--active {
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+  animation-name: fadeInDown;
+}
+
+@keyframes fadeInDown {
+  0% {
+      opacity: 0;
+      transform: translate3d(100%, -100%, 0px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(3vh);
+  }
+}
+
+.popap__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.popap__text {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(81 12 81);
+}
+
+/* message */
+.toast-text {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(81 12 81);
+}
+
+@media (max-width: 1000px) {
+  .card {
+    width: 20%;
+  }
+}
+
+@media (max-width: 770px) {
+  .card {
+    width: 30%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 45%;
+  }
+}
+
+
+
+
+
+
