@@ -72,6 +72,10 @@ body {
   cursor: pointer;
 }
 
+.card:hover {
+  transform: scale(1.05);
+}
+
 .card.open {
   background-size: contain;
   background-position: center center;

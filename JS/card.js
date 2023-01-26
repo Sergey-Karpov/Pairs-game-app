@@ -15,7 +15,7 @@ export class Card {
         action(this)
       }
     })
-      container.append(this.card)
+    container.append(this.card)
   }
 
   set open(value) {
