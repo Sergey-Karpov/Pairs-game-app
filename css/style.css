@@ -22,6 +22,7 @@ body {
   background-image: url("../img/game-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  min-height: 100dvh;
 }
 
 .title {
