@@ -4,7 +4,7 @@ html {
 
 *,
 *::before,
-*::after{
+*::after {
   box-sizing: inherit;
 }
 
@@ -19,7 +19,7 @@ a {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url('/img/game-bg.jpg');
+  background-image: url("/img/game-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -61,7 +61,7 @@ body {
   height: 5em;
   margin-right: 10px;
   margin-bottom: 10px;
-  background-image: url('../img/card-back.jpg');
+  background-image: url("/img/card-back.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   color: transparent;
@@ -103,7 +103,7 @@ body {
   align-items: center;
   width: 200px;
   height: 200px;
-  background-image: url('../img/timer.png');
+  background-image: url("/img/timer.png");
   background-size: cover;
   background-position: center center;
 }
@@ -161,12 +161,12 @@ body {
 
 @keyframes fadeInDown {
   0% {
-      opacity: 0;
-      transform: translate3d(100%, -100%, 0px);
+    opacity: 0;
+    transform: translate3d(100%, -100%, 0px);
   }
   100% {
-      opacity: 1;
-      transform: translateY(3vh);
+    opacity: 1;
+    transform: translateY(3vh);
   }
 }
 
@@ -209,9 +209,3 @@ body {
     width: 45%;
   }
 }
-
-
-
-
-
-

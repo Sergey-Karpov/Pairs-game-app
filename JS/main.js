@@ -1,16 +1,15 @@
-import {Card, AmazingCard} from './card.js'
-import { createPopap, createMessage } from './messages.js';
-import { sounds, messagesText, supportMessages } from './data.js'
+import { Card, AmazingCard } from "./card.js";
+import { createPopap, createMessage } from "./messages.js";
+import { sounds, messagesText, supportMessages } from "./data.js";
 
-let tryCounts = 0
+let tryCounts = 0;
 
-let popap = createPopap(document.body)
-let message = createMessage(document.body)
+let popap = createPopap(document.body);
+let message = createMessage(document.body);
 
-const startBtn = document.getElementById('start-btn')
+const startBtn = document.getElementById("start-btn");
 
 function newGame(container, cardsCount) {
-
   // создаем поле
   let cardsNumberArray = [];
   let cardsArray = [];
@@ -30,11 +29,11 @@ function newGame(container, cardsCount) {
 
   // создаем механику игры
   function flip(card) {
-    tryCounts = tryCounts + 1
-    if(tryCounts % 8 === 0) {
-      sounds.message.play()
-      message.active(supportMessages[Math.round(Math.random() * 17)])
-      setTimeout(message.deactive, 3000)
+    tryCounts = tryCounts + 1;
+    if (tryCounts % 8 === 0) {
+      sounds.message.play();
+      message.active(supportMessages[Math.round(Math.random() * 17)]);
+      setTimeout(message.deactive, 3000);
     }
     if (firstCard !== null && secondCard !== null) {
       if (firstCard.number != secondCard.number) {
@@ -63,12 +62,15 @@ function newGame(container, cardsCount) {
       }
     }
 
-    if (document.querySelectorAll('.card.success').length == cardsNumberArray.length) {
+    if (
+      document.querySelectorAll(".card.success").length ==
+      cardsNumberArray.length
+    ) {
       // сброс игры
-      tryCounts = 0
-      sounds.win.play()
+      tryCounts = 0;
+      sounds.win.play();
       popap.popapBg.active(`🎉🎈Поздравляем, отличная игра, вы выиграли!🎉🎈`);
-      container.innerHTML = '';
+      container.innerHTML = "";
       let cardsNumberArray = [];
       let cardsArray = [];
       let firstCard = null;
@@ -80,21 +82,15 @@ function newGame(container, cardsCount) {
 }
 
 // запуск игры
-startBtn.addEventListener('click', () => {
-  const container = document.getElementById('game')
-  container.textContent = ''
-  const cardsNumber =  document.getElementById('cards-number').value
-  if(cardsNumber) {
-    newGame(container, cardsNumber)
-    message.active(messagesText[cardsNumber])
-    setTimeout(message.deactive, 3000)
+startBtn.addEventListener("click", () => {
+  const container = document.getElementById("game");
+  container.textContent = "";
+  const cardsNumber = document.getElementById("cards-number").value;
+  if (cardsNumber) {
+    newGame(container, cardsNumber);
+    message.active(messagesText[cardsNumber]);
+    setTimeout(message.deactive, 3000);
   } else {
-    return
+    return;
   }
-})
-
-
-
-
-
-
+});
