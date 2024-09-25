@@ -1,8 +1,8 @@
 export const sounds = {
-  flip: new Audio("PAIRS-GAME-APP/sounds/Cards-success-sounds-effect.mp3"),
-  success: new Audio("PAIRS-GAME-APP/sounds/Cards-success-sounds-effect.mp3"),
-  win: new Audio("PAIRS-GAME-APP/sounds/stage-is-done.mp3"),
-  message: new Audio("PAIRS-GAME-APP/sounds/icq.mp3"),
+  flip: new Audio("/sounds/Cards-success-sounds-effect.mp3"),
+  success: new Audio("/sounds/Cards-success-sounds-effect.mp3"),
+  win: new Audio("/sounds/stage-is-done.mp3"),
+  message: new Audio("/sounds/icq.mp3"),
 };
 
 export const messagesText = {
