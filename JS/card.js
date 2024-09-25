@@ -47,10 +47,10 @@ export class AmazingCard extends Card {
     this._open = value;
     if (value) {
       this.card.classList.add("open");
-      this.card.style.backgroundImage = `url('/img/cards/${this.number}.png')`;
+      this.card.style.backgroundImage = `url('img/cards/${this.number}.png')`;
     } else {
       this.card.classList.remove("open");
-      this.card.style.backgroundImage = `url('/img/card-back.jpg')`;
+      this.card.style.backgroundImage = `url('img/card-back.jpg')`;
     }
   }
   get open() {
