@@ -1,5 +1,5 @@
 export const sounds = {
-  flip: new Audio("/sounds/Cards-success-sounds-effect.mp3"),
+  flip: new Audio("/sounds/Card-flip-sound-effect.mp3"),
   success: new Audio("/sounds/Cards-success-sounds-effect.mp3"),
   win: new Audio("/sounds/stage-is-done.mp3"),
   message: new Audio("/sounds/icq.mp3"),
@@ -32,4 +32,7 @@ export const supportMessages = [
   "я в тебя верю..., возможно...",
   "а ты уроки сделал?!?!",
   "ну все, это точно никогда не кончиться",
+  "!ДАЁПРСТ!",
+  "Ты все равно у мамы самый ЛУЧШИЙ",
+  "!ПОЛЮБОМУ баг в игре!",
 ];
